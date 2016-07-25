@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-void array_rotate(vector<int>vec);
+void array_rotate(vector<int>&vec);
 
 int main()
 {
@@ -28,6 +28,12 @@ int main()
 	for (int i=0; i<rotation; i++)
 	{
 		array_rotate(vec);
+
+			for(int i=0; i<total; i++)
+			{
+				cout << vec[i];
+			}
+
 	}
 
 	for(int i=0; i<input; i++)
@@ -45,7 +51,7 @@ int main()
 
 }
 
-void array_rotate(vector<int>vec)
+void array_rotate(vector<int>&vec)
 {
 	int last = vec.size() - 1;
 	int lastnum = vec[last];
